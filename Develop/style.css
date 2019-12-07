@@ -1,0 +1,40 @@
+/* Brittany Morris' Portfolio Site */
+* {
+  box-sizing: border-box;
+}
+
+.timercard {
+    margin: 50px;
+    padding-left: 30px;
+    background-color: #f9f900;
+    width: 170px;
+    height: 40px;
+}
+
+#countdown {
+    color: black;
+    padding-top: 7px;
+    padding-left: 5px;
+    font-style: bold;
+    display:inline-block;
+ }
+
+body {
+    background-image: url("./assets/breaking-bad-wallpaper-5.png");
+}
+
+.container {
+    width: 780px;
+    padding-top: 90px;
+    border: none;
+    display: flex;
+  }
+
+  .card-header {
+    background-color: #29472f;
+    color: white;
+  }
+  
+  .btn btn-primary {
+    background-color: #f9f900;
+  }
