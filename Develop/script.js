@@ -1,20 +1,20 @@
 // Breaking Bad: Trivia Challenge 
-var startOverBtn = document.getElementbyId("startover-button");
-var answerBtn0 = document.getElementbyId("button0");
-var answerBtn1  = document.getElementbyId("button1");
-var answerBtn2  = document.getElementbyId("button2");
-var answerBtn3  = document.getElementbyId("button3");
+//var startOverBtn = document.getElementbyId("startover-button");
+//var answerBtn0 = document.getElementbyId("button0");
+//var answerBtn1  = document.getElementbyId("button1");
+//var answerBtn2  = document.getElementbyId("button2");
+//var answerBtn3  = document.getElementbyId("button3");
 // Divs
-var question = document.getElementbyId("question");
-var timer = document.getElementbyId("timer");
-var results = document.getElementbyId("results");
+//var question = document.getElementbyId("question");
+//var timer = document.getElementbyId("timer");
+//var results = document.getElementbyId("results");
 // Audio
-var correctAudio = document.getElementbyId("correct-audio");
-var incorrectAudio = document.getElementbyId("incorrect-audio");
-incorrectAudio.setAttribute("src", "./Develop/audio/Better_Call_Saul.wav");
+//var correctAudio = document.getElementbyId("correct-audio");
+//var incorrectAudio = document.getElementbyId("incorrect-audio");
+//incorrectAudio.setAttribute("src", "./Develop/audio/Better_Call_Saul.wav");
 
 // Game object variables
-index : 0;
+//index : 0;
 correct: 0;
 incorrect: 0;
 timer : 0;
