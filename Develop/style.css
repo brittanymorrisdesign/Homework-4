@@ -21,6 +21,12 @@
 
 body {
     background-image: url("./assets/breaking-bad-wallpaper-5.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 600px;
+    background-position: top center !important;
+    background-size: cover;
 }
 
 .container {
