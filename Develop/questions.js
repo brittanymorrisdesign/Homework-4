@@ -1,4 +1,3 @@
-js
 var questions = [
   {
     title: "What kind of R.V. do Walt and Jesse purchase?",

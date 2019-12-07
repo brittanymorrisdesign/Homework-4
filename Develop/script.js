@@ -1,32 +1,46 @@
-/* Breaking Bad: Trivia Challenge */
-
-// Buttons
-var startBtn = document.createElement("button");
-var startOverBtn = document.createElement("button");
-var answerBtn0 = document.createElement("button");
-var answerBtn1  = document.createElement("button");
-var answerBtn2  = document.createElement("button");
-var startBtn = document.createElement("button");
+// Breaking Bad: Trivia Challenge 
+var startOverBtn = document.getElementbyId("startover-button");
+var answerBtn0 = document.getElementbyId("button0");
+var answerBtn1  = document.getElementbyId("button1");
+var answerBtn2  = document.getElementbyId("button2");
+var answerBtn3  = document.getElementbyId("button3");
 // Divs
-var question = document.createElement("div");
-var timer = document.createElement("div");
-var results = document.createElement("div");
+var question = document.getElementbyId("question");
+var timer = document.getElementbyId("timer");
+var results = document.getElementbyId("results");
 // Audio
-var startAudio = document.createElement("audio");
-var correctAudio = document.createElement("audio");
-var incorrectAudio = document.createElement("audio");
-startAudio.setAttribute("src", "./Develop/audio/breaking-bad-intro.mp3");
-startAudio.setAttribute("src", "./Develop/audio/xxxxx");
+var correctAudio = document.getElementbyId("correct-audio");
+var incorrectAudio = document.getElementbyId("incorrect-audio");
 incorrectAudio.setAttribute("src", "./Develop/audio/Better_Call_Saul.wav");
 
 // Game object variables
-
 index : 0;
 correct: 0;
 incorrect: 0;
 timer : 0;
+// Buttons
 
-// Create a function, generate HTML, 
+var startBtn = document.getElementById("start-btn");
+
+startBtn.addEventListener("click", startGame)
+
+// Start the game, hides the button after user clicks
+function startGame () {
+startBtn.classList.add("hide")
+questionContainer.classList.remove("hide")
+setNextQuestion()
+}
+
+function setNextQuestion(){
+
+}
+
+
+function selectAnswer(){
+
+
+}
+
 
 // Closes start button
 
@@ -42,3 +56,9 @@ var seconds = 20, $seconds = document.querySelector('#countdown');
 var rightCount = 0;
 var wrongCount = 0;
     
+// Intro Sound
+function playSound() {
+    var startAudio = document.getElementById("start-audio");
+    startAudio.setAttribute("src", "./Develop/audio/breaking-bad-intro.mp3");
+    sound.play();
+}
