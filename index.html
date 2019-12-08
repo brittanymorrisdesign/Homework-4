@@ -11,7 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/f21a002de0.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="./Develop/style.css">
   <title>Breaking Bad: Trivia Challenge</title>
 </head>
@@ -21,23 +22,40 @@
     <i class="fas fa-radiation-alt"></i>
     <div id="countdown"></div>
   </div>
-  </div>
+
+  
   <div id="countdown"></div>
+
   <div class="container">
     <div class="card text-center border-0">
       <div class="card-header">
         <en>Breaking Bad: Trivia Challenge</en>
       </div>
+
+
       <div class="card-body">
-        <p class="card-text">So how much do you know about Breaking Bad? Think you can outsmart Walter White? <br>Let's
-          find out!</br></p>
-        <button id="start-btn" href="#" style="background-color: #f9f900; color: black;" id="start-btn"
-          class="btn btn-primary border-0" onclick="playSound()">Start Quiz!</button>
+        <div id="message">So how much do you know about Breaking Bad? Think you can outsmart Walter White? <br>Let's
+          find out!</br></div>
+
+        <div id="question-container" class="hide">
+          <div id="question"></div>
+          <div id="counter"></div>
+          <div id="answer-buttons" class="btn-grid">
+            <button class="btn" id="answerOne"></button>
+            <button class="btn" id="answerTwo"></button>
+            <button class="btn" id="answerThree"></button>
+            <button class="btn" id="answerFour"></button>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="start-btn" href="#" style="background-color: #f9f900; color: black;" id="start-btn"
+            class="btn btn-primary border-0" onclick="startGame()">Start Quiz!</button>
+        </div>
       </div>
     </div>
   </div>
   </div>
-  </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
@@ -52,20 +70,3 @@
 </body>
 
 </html>
-
-<!-- <div id="question-container" class="hide">
-        <div id="questions">Questions</div>
-        <div id="answer-btns" class="btn-grid">
-          <button class="btn">Answer 1</button>
-          <button class="btn">Answer 1</button>
-          <button class="btn">Answer 1</button>
-          <button class="btn">Answer 1</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="controls">
-      <button id="start-btn" href="#" class="btn btn-primary border-0">Start Quiz!</button>
-      <button id="next-btn" href="#" class="next-btn btn hide">Next</button>
-
--->

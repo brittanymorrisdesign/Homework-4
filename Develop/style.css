@@ -36,11 +36,20 @@ body {
     display: flex;
   }
 
+  .card-body {
+    width: flex;
+    height:300px;
+  }
+
   .card-header {
     background-color: #29472f;
     color: white;
   }
   
+  #message {
+    padding-top: 30px;
+  }
+
   .btn btn-primary {
     background-color: #f9f900;
   }
