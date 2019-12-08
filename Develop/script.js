@@ -1,11 +1,16 @@
 // Inititate Variables
-var startButton = document.getElementById("start-btn");
+var startBtn = document.getElementById("start-btn");
+var i = 0;
 var score = 0;
 var answerOne = document.getElementById("answerOne");
 var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
 var answerFour = document.getElementById("answerFour");
 var answerButtons = document.getElementById("answer-buttons");
+
+var questionElement = document.getElementById("question");
+var answerButtonsElement = document.getElementById("answer-buttons");
+var questionContainerElement = document.getElementById("question-container");
 
 
 // Timer
@@ -18,16 +23,26 @@ var seconds = 75, $seconds = document.querySelector('#countdown');
 // Starting the Game //
 
 startBtn.addEventListener("click", startGame)
+document.getElementById("answer-buttons").hidden = true; // Keeps button questions hidden
+document.getElementById("awesome").hidden = false;
 // Start the game, hides the button after user clicks
 function startGame () {
-startButton.classList.add("hide");
+startBtn.classList.add("hide");
+questionContainerElement.classList.remove("hide");
 document.getElementById("start-btn").style.visibility = "hidden";
-// Hides message when button is clicked
-var messageDiv = document.getElementById("message");
-if (messageDiv.style.display === "none") {
-    messageDiv.style.display = "block";
-} else {
-    messageDiv.style.display = "none";
+questionElement.innerHTML = ""; // Hides message when button is clicked
+
+	setNextQuestion();
+};
+
+
+function setNextQuestion() {
+	document.getElementById("answer-buttons").hidden = false; // Reveals button questions
+
 }
-return renderQuestion()
+
+function showQuestion(question) {
+	questionElement.innerText = question.question
 }
+
+

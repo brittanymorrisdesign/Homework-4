@@ -36,8 +36,12 @@ body {
     display: flex;
   }
 
+  #question {
+    font-size: 18px;
+  }
+
   .card-body {
-    width: flex;
+    width: 750px;
     height:300px;
   }
 
@@ -50,6 +54,22 @@ body {
     padding-top: 30px;
   }
 
-  .btn btn-primary {
+  #start-btn {
+    align-content: center;
+    margin-left:20px;
     background-color: #f9f900;
+    width: 150px;
+    color: black; 
   }
+
+.btn {
+  background-color:	#E8E8E8; 
+  border-color: white;
+  
+  color: black; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%;
+  display: block; /* Make the buttons appear below each other */
+}
+
