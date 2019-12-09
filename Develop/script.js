@@ -1,7 +1,11 @@
-// Inititate Variables
-var startBtn = document.getElementById("start-btn");
+// Setting up initial variables
 var i = 0;
-var score = 0;
+var countdown = 75;
+let score = 0;
+let qCount = 0;
+let answers = document.querySelectorAll("question-container");
+
+var startBtn = document.getElementById("start-btn");
 var answerOne = document.getElementById("answerOne");
 var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
@@ -24,7 +28,6 @@ var seconds = 75, $seconds = document.querySelector('#countdown');
 
 startBtn.addEventListener("click", startGame)
 document.getElementById("answer-buttons").hidden = true; // Keeps button questions hidden
-document.getElementById("awesome").hidden = false;
 // Start the game, hides the button after user clicks
 function startGame () {
 startBtn.classList.add("hide");
@@ -35,14 +38,25 @@ questionElement.innerHTML = ""; // Hides message when button is clicked
 	setNextQuestion();
 };
 
-
 function setNextQuestion() {
 	document.getElementById("answer-buttons").hidden = false; // Reveals button questions
-
+	answerOne.hidden = false;
+	answerTwo.hidden = false;
+	answerThree.hidden = false;
+	answerOne.hidden = false;
+   
+	if (i === questions.length) {
+        questionEnder();
+    }
+    else {
+        document.getElementById("question").textContent = questions[i]["title"];
+        document.getElementById("answerOne").textContent = questions[i]["choices"][0];
+        document.getElementById("answerTwo").textContent = questions[i]["choices"][1];
+        document.getElementById("answerThree").textContent = questions[i]["choices"][2];
+        document.getElementById("answerFour").textContent = questions[i]["choices"][3];
+    }
 }
 
 function showQuestion(question) {
 	questionElement.innerText = question.question
 }
-
-
