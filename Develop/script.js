@@ -10,11 +10,16 @@ var answerOne = document.getElementById("answerOne");
 var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
 var answerFour = document.getElementById("answerFour");
+var messageDiv = document.querySelector("#message");
 var answerButtons = document.getElementById("answer-buttons");
 
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-buttons");
 var questionContainerElement = document.getElementById("question-container");
+
+var introSound = new Audio("Develop/audio/breaking-bad-intro.mp3");
+var correctSound = new Audio("Develop/audio/You're_god_damn_right.wav");
+var incorrectSound = new Audio("Develop/audio/Better_Call_Saul.wav");
 
 
 // Timer
@@ -23,6 +28,10 @@ var seconds = 75, $seconds = document.querySelector('#countdown');
     $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
     if(seconds --> 0) setTimeout(countdown, 1000)
 })();
+
+
+
+
 
 // Starting the Game //
 
@@ -34,11 +43,14 @@ startBtn.classList.add("hide");
 questionContainerElement.classList.remove("hide");
 document.getElementById("start-btn").style.visibility = "hidden";
 questionElement.innerHTML = ""; // Hides message when button is clicked
-
-	setNextQuestion();
+initiateQuestions();
 };
 
-function setNextQuestion() {
+
+
+
+
+function initiateQuestions() {
 	document.getElementById("answer-buttons").hidden = false; // Reveals button questions
 	answerOne.hidden = false;
 	answerTwo.hidden = false;
@@ -57,6 +69,60 @@ function setNextQuestion() {
     }
 }
 
-function showQuestion(question) {
-	questionElement.innerText = question.question
-}
+
+document.getElementById("answerOne").addEventListener("click", function () {
+    if (questions[i]["choices"][0] === questions[i]["answer"]) {
+        document.getElementById("message").innerHTML = "Correct!";
+        score++;
+        correctSound.play();
+    }
+    else {
+        document.getElementById("message").innerHTML = "Incorrect!";
+        incorrectSound.play();
+    }
+    i++;
+    initiateQuestions();
+})
+
+document.getElementById("answerTwo").addEventListener("click", function () {
+    if (questions[i]["choices"][0] === questions[i]["answer"]) {
+        document.getElementById("message").innerHTML = "Correct!";
+        score++;
+        correctSound.play();
+    }
+    else {
+        document.getElementById("message").innerHTML = "Incorrect!";
+        incorrectSound.play();
+    }
+    i++;
+    initiateQuestions();
+})
+
+document.getElementById("answerThree").addEventListener("click", function () {
+    if (questions[i]["choices"][0] === questions[i]["answer"]) {
+        document.getElementById("message").innerHTML = "Correct!";
+        score++;
+        correctSound.play();
+    }
+    else {
+        document.getElementById("message").innerHTML = "Incorrect!";
+        incorrectSound.play();
+    }
+    i++;
+    initiateQuestions();
+})
+
+
+document.getElementById("questionFour").addEventListener("click", function () {
+    if (questions[i]["choices"][0] === questions[i]["answer"]) {
+        document.getElementById("message").innerHTML = "Correct!";
+        score++;
+        correctSound.play();
+    }
+    else {
+        document.getElementById("message").innerHTML = "Incorrect!";
+        incorrectSound.play();
+    }
+    i++;
+    initiateQuestions();
+})

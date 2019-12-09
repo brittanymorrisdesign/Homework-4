@@ -51,7 +51,8 @@ body {
   }
   
   #message {
-    padding-top: 30px;
+    padding-top: 20px;
+    color: #29472f;
   }
 
   #start-btn {

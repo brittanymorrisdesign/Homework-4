@@ -10,7 +10,7 @@ var questions = [
     answer: "Police officer"
   },
   {
-    title: "Breaking Bad has referenced this famous poet numerous times",
+    title: "Breaking Bad has referenced this famous poet numerous times:",
     choices: ["Robert Frost", "Geoffrey Chaucer", "Robert Browning", "Walt Whitman"],
     answer: "Walt Whitman"
   },
