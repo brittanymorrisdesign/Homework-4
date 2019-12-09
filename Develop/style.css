@@ -7,7 +7,7 @@
     margin: 50px;
     padding-left: 30px;
     background-color: #f9f900;
-    width: 180px;
+    width: 170px;
     height: 40px;
 }
 
@@ -19,12 +19,23 @@
     display:inline-block;
  }
 
+#highscores{
+  position: absolute;
+  right: 0;
+  color: white;
+  padding-top: 7px;
+   margin-right: 50px;
+  font-style: bold;
+  display:inline-block;
+}
+
 body {
     background-image: url("./assets/breaking-bad-wallpaper-5.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 600px;
+    font-family: 'Noto Sans KR', sans-serif;
     background-position: top center !important;
     background-size: cover;
 }
@@ -37,7 +48,7 @@ body {
   }
 
   #question {
-    font-size: 18px;
+    font-size: 21px;
   }
 
   .card-body {
@@ -51,22 +62,32 @@ body {
   }
   
   #message {
-    padding-top: 20px;
+    padding-top: 12px;
+    font-weight: bold;
     color: #29472f;
   }
 
   #start-btn {
-    align-content: center;
-    margin-left:20px;
+    margin-left:265px;
+    margin-top: 60px;
     background-color: #f9f900;
-    width: 150px;
+    width: 180px;
     color: black; 
+  }
+
+  #start-btn:focus,  #start-btn :active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  #start-btn:hover {
+  background-color: #29472f; !important;
+  color: white;
   }
 
 .btn {
   background-color:	#E8E8E8; 
   border-color: white;
-  
   color: black; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
@@ -74,3 +95,16 @@ body {
   display: block; /* Make the buttons appear below each other */
 }
 
+#new-board-btn {
+  white-space: normal;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.btn:hover {
+background-color: #f9f900; !important;
+}

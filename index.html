@@ -13,7 +13,8 @@
   <script src="https://kit.fontawesome.com/f21a002de0.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="./Develop/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Develop/style.css">
   <title>Breaking Bad: Trivia Challenge</title>
 </head>
 
@@ -21,23 +22,26 @@
   <div class="timercard">
     <i class="fas fa-radiation-alt"></i>
     <div id="countdown"></div>
+    <div id="highscores">High Scores</div>
   </div>
 
-  
+
 
   <div class="container">
     <div class="card text-center border-0">
-      <div class="card-header"> <en>Breaking Bad: Trivia Challenge</en></div>
+      <div class="card-header">
+        <en>Breaking Bad: Trivia Challenge</en>
+      </div>
 
 
       <div class="card-body">
-        <div id="question">So how much do you know about Breaking Bad? 
-            <br>Think you can outsmart Walter White?</br> 
-            <br>Let's find out!</br>
-          </div>
+        <div id="question">So how much do you know about Breaking Bad?
+          <br>Think you can outsmart Walter White?</br>
+          <br>Let's find out!</br>
+        </div>
 
-          <div id="question-container" class="hide">
-            <p id="title"></p>
+        <div id="question-container" class="hide">
+          <p id="title"></p>
           <div id="answer-buttons" class="button-group">
             <button class="btn" id="answerOne"></button>
             <button class="btn" id="answerTwo"></button>
@@ -45,10 +49,10 @@
             <button class="btn" id="answerFour"></button>
             <div id="message"></div>
             <div id="scoreIndicator>" class="invisible">
+            </div>
           </div>
+          <button id="start-btn" href="#" class="btn btn-primary border-0" onclick="startGame()">Start Quiz!</button>
         </div>
-      <button id="start-btn" href="#" class="btn btn-primary border-0" onclick="startGame()">Start Quiz!</button>
-    </div>  
       </div>
     </div>
   </div>
@@ -63,7 +67,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-   <script src="./Develop/questions.js"></script>
+  <script src="./Develop/questions.js"></script>
   <script src="./Develop/script.js"></script>
 
 </body>
