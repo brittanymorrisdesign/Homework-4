@@ -75,6 +75,49 @@ body {
     color: black; 
 }
 
+  #submit-btn {
+    background-color: #f9f900;
+    width: 180px;
+    color: black; 
+}
+
+#submit-btn :focus, #submit-btn  :active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#submit-btn :hover {
+  background-color: #29472f; !important;
+  color: white;
+  margin: 20px;
+}
+
+
+#highscores-btn {
+  background-color: #29472f;
+  width: 180px;
+  color: white;
+}
+
+#highscores-btn :focus, #highscores-btn :active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#highscores-btn :hover {
+  background-color:  #f9f900 !important;
+  color:  black;
+}
+
+.button-group {
+  padding-top:20px;
+}
+
+.scorebuttons-container {
+  display: inline-block;
+}
+
+
   #start-btn:focus, #start-btn :active {
     outline: none !important;
     box-shadow: none !important;

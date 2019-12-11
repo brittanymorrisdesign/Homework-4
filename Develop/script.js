@@ -4,7 +4,8 @@ var seconds = 75;
 var score = 0;
 var questionNum = 0;
 
-var answers = document.querySelectorAll("question-container");
+var questionContainer = document.getElementById("question-container");
+var scoreContainer = document.getElementById("score-container");
 var messageDiv = document.querySelectorAll("#message");
 var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("start-btn");
@@ -49,10 +50,10 @@ function timerParameters() {
 document.getElementById("answer-buttons").hidden = true; // Keeps button questions hidden
 // Start the game, hides the button after user clicks
 function startGame () {
+    questionContainer.setAttribute("style", "display: block;")
     startBtn.classList.add("hide");
     questionContainerElement.classList.remove("hide");
     document.getElementById("start-btn").style.visibility = "hidden";
-    questionElement.innerHTML = ""; // Hides message when button is clicked
     initiateQuestions();
 };
 
@@ -138,8 +139,8 @@ document.getElementById("answerFour").addEventListener("click", function () {
 
 // Setting up high scores
 function highScores() {
-    questionElement.innerHTML = ""; // Hides questions 
-    message.innerHTML = ""; // Hides messages
+    questionContainer.setAttribute("style", "display: none;")
+    scoreContainer.setAttribute("style", "display: block;")
     highScoreSound.play();
     // Hides scores
     answerOne.remove();
@@ -148,6 +149,9 @@ function highScores() {
     answerFour.remove();
     document.getElementById("question").textContent = "You made it!";
 };
+
+
+//
 // Event Listeners
 startBtn.addEventListener("click", startGame);
 startBtn.addEventListener("click", startTimer);
