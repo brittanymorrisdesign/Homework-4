@@ -74,58 +74,58 @@ body {
 }
 
 #submit-btn :focus, #submit-btn  :active {
-  outline: none !important;
-  box-shadow: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 #submit-btn :hover {
-  background-color: #29472f;
-  color: white;
+    background-color: #29472f;
+    color: white;
 }
 
 #retake-btn {
-  background-color: #f9f900;
-  width: 180px;
-  color: black; 
-  margin-top: 40px;
-  margin-left:265px;
-  margin-top: 60px;
-  display: inline-block;
-  text-decoration: none;
+    background-color: #f9f900;
+    width: 180px;
+    color: black; 
+    margin-top: 40px;
+    margin-left:265px;
+    margin-top: 60px;
+    display: inline-block;
+    text-decoration: none;
 }
 
-
 #highscores-btn {
-  background-color: #29472f;
-  width: 180px;
-  color: white;
-  margin-left: 5px;
-  margin-top: 40px;
-  display: inline-block;
+    background-color: #29472f;
+    width: 180px;
+    color: white;
+    margin-left: 5px;
+    margin-top: 40px;
+    display: inline-block;
 }
 
 #highscores-btn :focus, #highscores-btn :active {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
 }
-
-#highscores-btn :hover {
-  background-color: #f9f900;
-  color: black;
+a:hover {
+    background-color: #f9f900;
+    color: black;
+    text-decoration: none;
 }
 
 .button-group {
-  padding-top:20px;
+    padding-top:20px;
 }
 
 #start-btn:focus, #start-btn :active {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
   
 #start-btn:hover {
-  background-color: #29472f;
-  color: white;
+    background-color: #29472f;
+    color: white;
 }
 
 .btn {
