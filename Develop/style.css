@@ -19,7 +19,7 @@
     display:inline-block;
 }
 
-#highscores{
+.highscores {
     position: absolute;
     right: 0;
     color: white;
@@ -92,7 +92,6 @@ body {
 #submit-btn :hover {
   background-color: #29472f; !important;
   color: white;
-  margin: 20px;
 }
 
 
@@ -119,7 +118,6 @@ body {
   padding-top:20px;
 }
 
-
 #start-btn:focus, #start-btn :active {
   outline: none !important;
   box-shadow: none !important;
@@ -134,7 +132,7 @@ body {
     background-color:	#E8E8E8; 
     border-color: white;
     color: black; /* White text */
-    padding: 10px 24px; /* Some padding */
+    padding: 10px; /* Some padding */
     margin: 0 auto;
     cursor: pointer; /* Pointer/hand icon */
     width: 100vh;
@@ -145,6 +143,13 @@ body {
     white-space: normal;
 }
 
+.input-text {
+    margin-top: 20px;
+    text-align: center;
+    color: #5a5a5a;
+    width: 375px;
+}
+
 .btn:focus, .btn:active {
     outline: none !important;
     box-shadow: none !important;
@@ -152,4 +157,9 @@ body {
 
 .btn:hover {
     background-color: #f9f900; !important;
+}
+
+.highscores:hover{
+    color: #f9f900;
+    text-decoration: none;
 }

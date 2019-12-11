@@ -149,14 +149,20 @@ function highScores() {
     answerTwo.remove();
     answerThree.remove();
     answerFour.remove();
-    document.getElementById("question").textContent = "You made it!";
+    finalScore.textContent = seconds; // Adds final score
+    document.getElementById("question").textContent = "You made it! Now let's cook.";
     setTimeout(finalScore, 1000);
     timerParameters();
     clearInterval(interval); // Stops Timer
 };
 
-
-//
 // Event Listeners
 startBtn.addEventListener("click", startGame);
 startBtn.addEventListener("click", startTimer);
+
+// Adding names and scores to local storage 
+// Check browser support
+//if (typeof(Storage) !== "undefined") {
+    // Store
+ //   localStorage.setItem("lastname", JSON.stringify());
+  //  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
