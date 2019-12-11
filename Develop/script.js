@@ -4,14 +4,6 @@ var seconds = 75;
 var score = 0;
 var questionNum = 0;
 
-var highScoresContainer = document.getElementById("highscores-container");
-var highScoresBtn = document.getElementById("highscores-btn");
-var submitBtn = document.getElementById("submit-btn");
-var highScoresContainer = document.getElementById("highscores-container");
-var inputText = document.getElementById("input-text");
-var questionContainer = document.getElementById("question-container");
-var scoreContainer = document.getElementById("score-container");
-var messageDiv = document.querySelectorAll("#message");
 var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("start-btn");
 var answerOne = document.getElementById("answerOne");
@@ -23,6 +15,15 @@ var finalScore = document.getElementById("finalscore");
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-buttons");
 var questionContainerElement = document.getElementById("question-container");
+var retakeBtn = document.getElementById("retake-btn");
+var highScoresContainer = document.getElementById("highscores-container");
+var highScoresBtn = document.getElementById("highscores-btn");
+var submitBtn = document.getElementById("submit-btn");
+var highScoresContainer = document.getElementById("highscores-container");
+var inputText = document.getElementById("input-text");
+var questionContainer = document.getElementById("question-container");
+var scoreContainer = document.getElementById("score-container");
+var messageDiv = document.querySelectorAll("message");
 // Audio variables
 var highScoreSound = new Audio("Develop/audio/breaking-bad-intro.mp3");
 var correctSound = new Audio("Develop/audio/You're_god_damn_right.wav");
@@ -89,12 +90,12 @@ function initiateQuestions() {
 // Setting up questions
 document.getElementById("answerOne").addEventListener("click", function () {
     if (questions[i]["choices"][0] === questions[i]["answer"]) {
-        document.getElementById("message").innerHTML = "Correct!";
+        document.getElementById("message").textContent = "Correct!";
         score++;
         correctSound.play();
     }
     else {
-        document.getElementById("message").innerHTML = "Incorrect!";
+        document.getElementById("message").textContent = "Incorrect!";
         seconds -= 15;
         incorrectSound.play();
     }
@@ -104,12 +105,12 @@ document.getElementById("answerOne").addEventListener("click", function () {
 
 document.getElementById("answerTwo").addEventListener("click", function () {
     if (questions[i]["choices"][1] === questions[i]["answer"]) {
-        document.getElementById("message").innerHTML = "Correct!";
+        document.getElementById("message").textContent = "Correct!";
         score++;
         correctSound.play();
     }
     else {
-        document.getElementById("message").innerHTML = "Incorrect!";
+        document.getElementById("message").textContent = "Incorrect!";
         seconds -= 15;
         incorrectSound.play();
     }
@@ -120,12 +121,12 @@ document.getElementById("answerTwo").addEventListener("click", function () {
 
 document.getElementById("answerThree").addEventListener("click", function () {
     if (questions[i]["choices"][2] === questions[i]["answer"]) {
-        document.getElementById("message").innerHTML = "Correct!";
+        document.getElementById("message").textContent = "Correct!";
         score++;
         correctSound.play();
     }
     else {
-        document.getElementById("message").innerHTML = "Incorrect!";
+        document.getElementById("message").textContent = "Incorrect!";
         seconds -= 15;
         incorrectSound.play();
     }
@@ -135,11 +136,11 @@ document.getElementById("answerThree").addEventListener("click", function () {
 
 document.getElementById("answerFour").addEventListener("click", function () {
     if (questions[i]["choices"][3] === questions[i]["answer"]) {
-        document.getElementById("message").innerHTML = "Correct!";
+        document.getElementById("message").textContent = "Correct!";
         score++;
     }
     else {
-        document.getElementById("message").innerHTML = "Incorrect!";
+        document.getElementById("message").textContent = "Incorrect!";
         seconds -= 15;
     }
     i++;
@@ -159,7 +160,6 @@ function highScores() {
     answerFour.remove();
     finalScore.textContent = seconds; // Adds final score
     document.getElementById("question").textContent = "You made it! Now let's cook.";
-    setTimeout(finalScore, 1000);
     timerParameters();
     clearInterval(interval); // Stops Timer
 };
@@ -194,7 +194,7 @@ submitBtn.addEventListener("click", function () {
      // Highscores button clicked
 highScoresBtn.addEventListener("click", function(event) {
     scoreContainer.setAttribute("style", "display: none;")
-    highScoresContainer.setAttribute("style", "display: block;")
+    retakeBtn.setAttribute("style", "display: block;")
     document.getElementById("question").textContent = "High Scores";
     submitBtn.remove();
     inputText.remove();

@@ -94,16 +94,16 @@ body {
   color: white;
 }
 
-
 #retake-btn {
   background-color: #f9f900;
   width: 180px;
   color: black; 
   margin-top: 40px;
-  margin-right: 5px;
+  margin-left:265px;
+  margin-top: 60px;
   display: inline-block;
+  text-decoration: none;
 }
-
 
 #highscores-btn {
   background-color: #29472f;
@@ -115,13 +115,13 @@ body {
 }
 
 #highscores-btn :focus, #highscores-btn :active {
-  outline: none !important;
-  box-shadow: none !important;
+  outline: none;
+  box-shadow: none;
 }
 
 #highscores-btn :hover {
-  background-color:  #f9f900 !important;
-  color:  black;
+  background-color: #f9f900;
+  color: black;
 }
 
 .button-group {
@@ -129,12 +129,12 @@ body {
 }
 
 #start-btn:focus, #start-btn :active {
-  outline: none !important;
-  box-shadow: none !important;
+  outline: none;
+  box-shadow: none;
 }
   
 #start-btn:hover {
-  background-color: #29472f; !important;
+  background-color: #29472f;
   color: white;
 }
 
@@ -161,12 +161,12 @@ body {
 }
 
 .btn:focus, .btn:active {
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none;
+    box-shadow: none;
 }
 
 .btn:hover {
-    background-color: #f9f900; !important;
+    background-color: #f9f900;
 }
 
 .highscores:hover{
