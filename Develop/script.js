@@ -4,6 +4,9 @@ var seconds = 75;
 var score = 0;
 var questionNum = 0;
 
+var submitBtn = document.getElementById("submit-btn");
+var highScoresContainer = document.getElementById("highscores-container");
+var inputText = document.getElementById("input-text");
 var questionContainer = document.getElementById("question-container");
 var scoreContainer = document.getElementById("score-container");
 var messageDiv = document.querySelectorAll("#message");
@@ -160,9 +163,25 @@ function highScores() {
 startBtn.addEventListener("click", startGame);
 startBtn.addEventListener("click", startTimer);
 
-// Adding names and scores to local storage 
-// Check browser support
-//if (typeof(Storage) !== "undefined") {
-    // Store
- //   localStorage.setItem("lastname", JSON.stringify());
-  //  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+// Adding names to local storage 
+
+     // Connect submit button to form
+      submitBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+
+    // Create user object from submission
+      var user = {
+           Name: inputText.value.trim(),
+};
+    // set new submission
+    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("seconds", JSON.stringify(seconds));
+  
+    // Store info with submit button
+submitBtn.addEventListener("click", function () {
+    localStorage.setItem("submitBtn", JSON.stringify(user));
+    localStorage.setItem("seconds", JSON.stringify(seconds));
+})
+    }
+)
+
