@@ -17,12 +17,12 @@
   <link rel="stylesheet" type="text/css" href="./Develop/style.css">
   <title>Breaking Bad: Trivia Challenge</title>
 </head>
-<!-- Card for Timer -->
+
 <body>
+  <!-- Card for Timer -->
   <div class="timercard">
     <i class="fas fa-radiation-alt"></i>
     <div id="countdown">0</div><span> Seconds</span>
-    <a class="highscores" href="/Develop/highscores.html">High Scores</a>
   </div>
   <!-- Card for Quiz -->
   <div class="container">
@@ -48,20 +48,20 @@
           <p>Your final score is: <span id="finalscore"></span></p>
           <!-- Initials and score input -->
           <div id="highscores-container">
-          <input type="text" class="input-text" id="input-text" name="Name" onfocus="this.value=''" placeholder="Enter your name here"><br>
-          <div class="scorebuttons-container">
-            <input type="submit" value="Submit your Score" id="submit-btn"
-              class="btn btn-primary border-0"></button>
-            <input type="highscores-btn" value="View High Scores" id="highscores-btn" href="#"
-              class="btn btn-primary border-0"></button>
+            <input type="text" class="input-text" id="input-text" name="Name" onfocus="this.value=''"
+              placeholder="Enter your name here"><br>
+            <div class="scorebuttons-container">
+              <input type="submit" value="Submit your Score" id="submit-btn" class="btn btn-primary border-0"></button>
+              <input type="highscores-btn" value="View High Scores" id="highscores-btn" href="#"
+                class="btn btn-primary border-0"></button>
+            </div>
           </div>
         </div>
+        <!-- High Scores Section -->
+        <a href="index.html"><button id="retake-btn" input type="retake-btn" value="Retake Quiz" id="retake-btn"
+            class="btn btn-primary border-0" style="display:none;">Retake Quiz!</button></a>
+        <button id="start-btn" class="btn btn-primary border-0">Start Quiz!</button>
       </div>
-          <!-- High Scores Section -->
-          <a href="index.html"><button id="retake-btn" input type="retake-btn" value="Retake Quiz" id="retake-btn" 
-          class="btn btn-primary border-0" style="display:none;">Retake Quiz!</button></a>
-      <button id="start-btn" class="btn btn-primary border-0">Start Quiz!</button>
-    </div>
     </div>
   </div>
   </div>

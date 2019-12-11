@@ -24,6 +24,7 @@ var inputText = document.getElementById("input-text");
 var questionContainer = document.getElementById("question-container");
 var scoreContainer = document.getElementById("score-container");
 var messageDiv = document.querySelectorAll("message");
+var highScoresLink = document.querySelectorAll("highscoreslink");
 // Audio variables
 var highScoreSound = new Audio("Develop/audio/breaking-bad-intro.mp3");
 var correctSound = new Audio("Develop/audio/You're_god_damn_right.wav");
@@ -204,6 +205,27 @@ highScoresBtn.addEventListener("click", function(event) {
 
      // get most recent submission
      var lastUser = JSON.parse(localStorage.getItem("user"));
-    
 })
 
+     // Highscores link clicked
+     highScoresBtn2.addEventListener("click", function(event) {
+        scoreContainer.setAttribute("style", "display: none;")
+        retakeBtn.setAttribute("style", "display: block;")
+        document.getElementById("question").textContent = "High Scores";
+        submitBtn.remove();
+        inputText.remove();
+        highScoresBtn2 .remove();
+        highScoresBtn2 .remove();
+        question.textContent = localStorage.getItem("user") + ": " + localStorage.getItem("seconds");
+    })
+
+// High Scores link
+queryElement("highscoreslink").addEventListener("click", (e) => {
+    e.preventDefault();
+    clearInterval(clock);
+    queryElement("seconds").innerHTML = 0;
+   seonds = initialTime;
+    score = 0;
+    qCount = 0;
+    document.getElementById("finalscore").textContent = ""
+});
