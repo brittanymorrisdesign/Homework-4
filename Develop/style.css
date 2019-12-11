@@ -90,8 +90,18 @@ body {
 }
 
 #submit-btn :hover {
-  background-color: #29472f; !important;
+  background-color: #29472f;
   color: white;
+}
+
+
+#retake-btn {
+  background-color: #f9f900;
+  width: 180px;
+  color: black; 
+  margin-top: 40px;
+  margin-right: 5px;
+  display: inline-block;
 }
 
 

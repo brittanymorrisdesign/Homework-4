@@ -4,6 +4,8 @@ var seconds = 75;
 var score = 0;
 var questionNum = 0;
 
+var highScoresContainer = document.getElementById("highscores-container");
+var highScoresBtn = document.getElementById("highscores-btn");
 var submitBtn = document.getElementById("submit-btn");
 var highScoresContainer = document.getElementById("highscores-container");
 var inputText = document.getElementById("input-text");
@@ -33,10 +35,13 @@ function startTimer() {
     initiateQuestions(questionNum);
     interval = setInterval(function() {
         seconds--;
-        timerParameters();
-    }, 1000);
-  
-}
+        if (seconds === 0) {
+            clearInterval(seconds); // Stops timer at 0
+          }
+            timerParameters();
+        }, 1000);
+    }
+
     
 function timerParameters() {
     if (seconds < 10) {
@@ -168,6 +173,7 @@ startBtn.addEventListener("click", startTimer);
      // Connect submit button to form
       submitBtn.addEventListener("click", function(event) {
         event.preventDefault();
+        message.innerHTML = ""; // Hides messages
 
     // Create user object from submission
       var user = {
@@ -184,4 +190,20 @@ submitBtn.addEventListener("click", function () {
 })
     }
 )
+
+     // Highscores button clicked
+highScoresBtn.addEventListener("click", function(event) {
+    scoreContainer.setAttribute("style", "display: none;")
+    highScoresContainer.setAttribute("style", "display: block;")
+    document.getElementById("question").textContent = "High Scores";
+    submitBtn.remove();
+    inputText.remove();
+    highScoresBtn.remove();
+    highScoresBtn.remove();
+    question.textContent = localStorage.getItem("user") + ": " + localStorage.getItem("seconds");
+
+     // get most recent submission
+     var lastUser = JSON.parse(localStorage.getItem("user"));
+    
+})
 
