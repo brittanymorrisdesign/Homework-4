@@ -79,6 +79,9 @@ body {
     background-color: #f9f900;
     width: 180px;
     color: black; 
+    margin-top: 40px;
+    margin-right: 5px;
+    display: inline-block;
 }
 
 #submit-btn :focus, #submit-btn  :active {
@@ -97,6 +100,9 @@ body {
   background-color: #29472f;
   width: 180px;
   color: white;
+  margin-left: 5px;
+  margin-top: 40px;
+  display: inline-block;
 }
 
 #highscores-btn :focus, #highscores-btn :active {
@@ -113,19 +119,15 @@ body {
   padding-top:20px;
 }
 
-.scorebuttons-container {
-  display: inline-block;
-}
 
-
-  #start-btn:focus, #start-btn :active {
-    outline: none !important;
-    box-shadow: none !important;
+#start-btn:focus, #start-btn :active {
+  outline: none !important;
+  box-shadow: none !important;
 }
   
-  #start-btn:hover {
-    background-color: #29472f; !important;
-    color: white;
+#start-btn:hover {
+  background-color: #29472f; !important;
+  color: white;
 }
 
 .btn {

@@ -14,6 +14,7 @@ var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
 var answerFour = document.getElementById("answerFour");
 var answerButtons = document.getElementById("answer-buttons");
+var finalScore = document.getElementById("finalscore");
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-buttons");
 var questionContainerElement = document.getElementById("question-container");
@@ -142,12 +143,16 @@ function highScores() {
     questionContainer.setAttribute("style", "display: none;")
     scoreContainer.setAttribute("style", "display: block;")
     highScoreSound.play();
+    message.innerHTML = ""; // Hides messages
     // Hides scores
     answerOne.remove();
     answerTwo.remove();
     answerThree.remove();
     answerFour.remove();
     document.getElementById("question").textContent = "You made it!";
+    setTimeout(finalScore, 1000);
+    timerParameters();
+    clearInterval(interval); // Stops Timer
 };
 
 
