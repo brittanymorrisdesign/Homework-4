@@ -1,52 +1,62 @@
 // Setting up initial variables
 var i = 0;
-var countdown = 75;
-let score = 0;
-let qCount = 0;
-let answers = document.querySelectorAll("question-container");
+var seconds = 75;
+var score = 0;
+var questionNum = 0;
 
+var answers = document.querySelectorAll("question-container");
+var messageDiv = document.querySelectorAll("#message");
+var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("start-btn");
 var answerOne = document.getElementById("answerOne");
 var answerTwo = document.getElementById("answerTwo");
 var answerThree = document.getElementById("answerThree");
 var answerFour = document.getElementById("answerFour");
-var messageDiv = document.querySelector("#message");
 var answerButtons = document.getElementById("answer-buttons");
-
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-buttons");
 var questionContainerElement = document.getElementById("question-container");
-
+// Audio variables
 var highScoreSound = new Audio("Develop/audio/breaking-bad-intro.mp3");
 var correctSound = new Audio("Develop/audio/You're_god_damn_right.wav");
 var incorrectSound = new Audio("Develop/audio/Better_Call_Saul.wav");
 
+// Start Timer once button is clicked
+function startTimer() {
+    countdown.textContent = 75 
 
-// Timer
-var seconds = 75, $seconds = document.querySelector('#countdown');
-(function countdown() {
-    $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
-    if(seconds --> 0) setTimeout(countdown, 1000)
-})();
-
+    initiateQuestions(questionNum);
+    interval = setInterval(function() {
+        seconds--;
+        timerParameters();
+    }, 1000);
+  
+}
+    
+function timerParameters() {
+    if (seconds < 10) {
+        seconds = "0" + seconds.toString();
+    }
+   
+    if (seconds <= 0) {
+        clearInterval(interval);
+    }
+    
+    countdown.textContent = seconds;
+}
 
 // Starting the Game 
-
-startBtn.addEventListener("click", startGame)
 document.getElementById("answer-buttons").hidden = true; // Keeps button questions hidden
 // Start the game, hides the button after user clicks
 function startGame () {
-startBtn.classList.add("hide");
-questionContainerElement.classList.remove("hide");
-document.getElementById("start-btn").style.visibility = "hidden";
-questionElement.innerHTML = ""; // Hides message when button is clicked
-initiateQuestions();
+    startBtn.classList.add("hide");
+    questionContainerElement.classList.remove("hide");
+    document.getElementById("start-btn").style.visibility = "hidden";
+    questionElement.innerHTML = ""; // Hides message when button is clicked
+    initiateQuestions();
 };
 
-
-
 // Setting up initial questions
-
 function initiateQuestions() {
 	document.getElementById("answer-buttons").hidden = false; // Reveals button questions
 	answerOne.hidden = false;
@@ -67,7 +77,6 @@ function initiateQuestions() {
 }
 
 // Setting up questions
-
 document.getElementById("answerOne").addEventListener("click", function () {
     if (questions[i]["choices"][0] === questions[i]["answer"]) {
         document.getElementById("message").innerHTML = "Correct!";
@@ -76,7 +85,7 @@ document.getElementById("answerOne").addEventListener("click", function () {
     }
     else {
         document.getElementById("message").innerHTML = "Incorrect!";
-        countdown -= 15;
+        seconds -= 15;
         incorrectSound.play();
     }
     i++;
@@ -91,11 +100,12 @@ document.getElementById("answerTwo").addEventListener("click", function () {
     }
     else {
         document.getElementById("message").innerHTML = "Incorrect!";
-        countdown -= 15;
+        seconds -= 15;
         incorrectSound.play();
     }
     i++;
     initiateQuestions();
+    timerParameters()
 })
 
 document.getElementById("answerThree").addEventListener("click", function () {
@@ -106,13 +116,12 @@ document.getElementById("answerThree").addEventListener("click", function () {
     }
     else {
         document.getElementById("message").innerHTML = "Incorrect!";
-        countdown -= 15;
+        seconds -= 15;
         incorrectSound.play();
     }
     i++;
     initiateQuestions();
 })
-
 
 document.getElementById("answerFour").addEventListener("click", function () {
     if (questions[i]["choices"][3] === questions[i]["answer"]) {
@@ -121,14 +130,13 @@ document.getElementById("answerFour").addEventListener("click", function () {
     }
     else {
         document.getElementById("message").innerHTML = "Incorrect!";
-        countdown -= 15;
+        seconds -= 15;
     }
     i++;
     initiateQuestions();
 })
 
 // Setting up high scores
-
 function highScores() {
     questionElement.innerHTML = ""; // Hides questions 
     message.innerHTML = ""; // Hides messages
@@ -139,4 +147,7 @@ function highScores() {
     answerThree.remove();
     answerFour.remove();
     document.getElementById("question").textContent = "You made it!";
-}
+};
+// Event Listeners
+startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", startTimer);

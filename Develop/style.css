@@ -17,16 +17,16 @@
     padding-left: 5px;
     font-style: bold;
     display:inline-block;
- }
+}
 
 #highscores{
-  position: absolute;
-  right: 0;
-  color: white;
-  padding-top: 7px;
-   margin-right: 50px;
-  font-style: bold;
-  display:inline-block;
+    position: absolute;
+    right: 0;
+    color: white;
+    padding-top: 7px;
+    margin-right: 50px;
+    font-style: bold;
+    display:inline-block;
 }
 
 body {
@@ -45,27 +45,27 @@ body {
     padding-top: 90px;
     border: none;
     display: flex;
-  }
+}
 
   #question {
     font-size: 21px;
-  }
+}
 
   .card-body {
     width: 750px;
     height:300px;
-  }
+}
 
   .card-header {
     background-color: #29472f;
     color: white;
-  }
+}
   
   #message {
     padding-top: 12px;
     font-weight: bold;
     color: #29472f;
-  }
+}
 
   #start-btn {
     margin-left:265px;
@@ -73,38 +73,38 @@ body {
     background-color: #f9f900;
     width: 180px;
     color: black; 
-  }
+}
 
-  #start-btn:focus,  #start-btn :active {
+  #start-btn:focus, #start-btn :active {
     outline: none !important;
     box-shadow: none !important;
-  }
+}
   
   #start-btn:hover {
-  background-color: #29472f; !important;
-  color: white;
-  }
+    background-color: #29472f; !important;
+    color: white;
+}
 
 .btn {
-  background-color:	#E8E8E8; 
-  border-color: white;
-  color: black; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  width: 100%;
-  display: block; /* Make the buttons appear below each other */
+    background-color:	#E8E8E8; 
+    border-color: white;
+    color: black; /* White text */
+    padding: 10px 24px; /* Some padding */
+    margin: 0 auto;
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100vh;
+    display: block; /* Make the buttons appear below each other */
 }
 
 #new-board-btn {
-  white-space: normal;
+    white-space: normal;
 }
 
 .btn:focus, .btn:active {
-  outline: none !important;
-  box-shadow: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-
 .btn:hover {
-background-color: #f9f900; !important;
+    background-color: #f9f900; !important;
 }
