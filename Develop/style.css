@@ -29,7 +29,7 @@ body {
     background-size: cover;
 }
 
-.container {
+.container-fluid {
     width: 780px;
     padding-top: 90px;
     border: none;

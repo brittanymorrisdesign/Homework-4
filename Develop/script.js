@@ -3,6 +3,8 @@ var i = 0;
 var seconds = 75;
 var score = 0;
 var questionNum = 0;
+var interval
+
 
 var countdown = document.getElementById("countdown");
 var startBtn = document.getElementById("start-btn");
@@ -50,11 +52,10 @@ function timerParameters() {
     if (seconds < 10) {
         seconds = "0" + seconds.toString();
     }
-   
     if (seconds <= 0) {
         clearInterval(interval);
+        document.getElementById("countdown").innerHTML = "Expired!";
     }
-    
     countdown.textContent = seconds;
 }
 
@@ -193,7 +194,7 @@ submitBtn.addEventListener("click", function () {
     }
 )
 
-     // Highscores button clicked
+    // Highscores button clicked
 highScoresBtn.addEventListener("click", function(event) {
     scoreContainer.setAttribute("style", "display: none;")
     retakeBtn.setAttribute("style", "display: block;")
@@ -203,7 +204,6 @@ highScoresBtn.addEventListener("click", function(event) {
     highScoresBtn.remove();
     highScoresBtn.remove();
     // get most recent submission
-    var lastUser = JSON.parse(localStorage.getItem("user"));
+    var lastUser = JSON.parse(localStorage.getItem("user")); // Changes object back to string
     question.textContent = lastUser.Name + ": " + localStorage.getItem("seconds");
-
 })
