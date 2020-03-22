@@ -1,12 +1,8 @@
-# Homework-4
-Code Quiz - Web APIs
+# Homework-3
+Code Quiz - Web APIs </br>
+Github Page: https://brittanymorrisdesign.github.io/Homework-4
 
-Application Instructions: 
-Open index.html to view application
-
-Live Demo: https://brittanymorrisdesign.github.io/Homework-4/
-
-Objective:
+# Objective
 To build a code quiz with multiple-choice questions; stores high scores client-side.
 
 Play proceeds as follows:
@@ -16,10 +12,12 @@ Play proceeds as follows:
 
 • Score is calculated by time remaining. Answering quickly and correctly results in a higher score. Answering incorrectly results in a time penalty (for example, 15 seconds are subtracted from time remaining).
 
-• When time runs out and/or all questions are answered, the user is presented with their final score and asked to enter their initials. Their final score and initials are then stored in `localStorage`.
+• When time runs out and/or all questions are answered, the user is presented with their final score and asked to enter their initials. Their final score and initials are then stored in `localStorage`. </br>
 
-Built With: 
-HTML5 CSS3 Bootstrap JavaScript
-![image](https://user-images.githubusercontent.com/44029053/70681535-ae526280-1c69-11ea-9d54-9338a3a10f0b.jpg)
+![bg-showcase-9 copy](https://user-images.githubusercontent.com/44029053/77261567-b147f080-6c65-11ea-8ec0-338c4f4b5341.png)
 
-
+# Technologies Used
+* JavaScript
+* HTML
+* CSS
+* Bootstrap
